@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2025 a las 00:57:06
+-- Tiempo de generación: 24-09-2025 a las 01:33:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,7 +44,7 @@ CREATE TABLE `empleado` (
 
 INSERT INTO `empleado` (`id_empleado`, `dni`, `apellido`, `nombre`, `acceso`, `estado`) VALUES
 (1, 42278291, 'Arce', 'Brayan', 3, 1),
-(2, 27384937, 'Gomez', 'Santiago', 2, 1),
+(2, 27384937, 'Gomez', 'Santiago', 1, 0),
 (3, 427483746, 'Aguero', 'Jonatan', 2, 1);
 
 -- --------------------------------------------------------
@@ -67,10 +67,10 @@ CREATE TABLE `herramientas` (
 
 INSERT INTO `herramientas` (`id_herramienta`, `nombre`, `descripción`, `stock`, `estado`) VALUES
 (1, 'Fresadora', 'máquina-herramienta diseñada para realizar trabajos de mecanizado por arranque de viruta', 5, 1),
-(2, 'Amoladora', 'herramienta eléctrica portátil de alta potencia utilizada principalmente para cortar, lijar, pulir, ', 10, 2),
-(3, 'Taladro', 'herramienta mecánica o eléctrica diseñada para perforar superficies mediante la rotación de una broc', 8, 3),
-(4, 'Soldadora', 'herramienta utilizada principalmente para unir piezas metálicas mediante la aplicación de calor, log', 6, 4),
-(5, 'Martillo', 'herramienta de percusión utilizada para golpear directa o indirectamente una pieza, causando su desp', 11, 2);
+(2, 'Amoladora', 'herramienta eléctrica portátil de alta potencia utilizada principalmente para cortar, lijar, pulir, ', 10, 1),
+(3, 'Taladro', 'herramienta mecánica o eléctrica diseñada para perforar superficies mediante la rotación de una broc', 8, 0),
+(4, 'Soldadora', 'herramienta utilizada principalmente para unir piezas metálicas mediante la aplicación de calor, log', 6, 1),
+(5, 'Martillo', 'herramienta de percusión utilizada para golpear directa o indirectamente una pieza, causando su desp', 11, 1);
 
 -- --------------------------------------------------------
 
@@ -92,12 +92,12 @@ CREATE TABLE `movimiento` (
 --
 
 INSERT INTO `movimiento` (`id_movimiento`, `id_empleado`, `id_herramienta`, `fechap`, `fechad`, `cantidadret`) VALUES
-(1, 1, 3, '2025-04-12', '0000-00-00', 1),
-(2, 1, 5, '2025-04-12', '0000-00-00', 3),
-(3, 2, 1, '2025-01-25', '0000-00-00', 1),
-(4, 2, 2, '2025-01-27', '0000-00-00', 2),
-(5, 3, 4, '2025-10-15', '0000-00-00', 2),
-(6, 3, 5, '2025-11-10', '0000-00-00', 3);
+(1, 1, 3, '2025-04-12', '2025-04-15', 1),
+(2, 1, 5, '2025-04-12', '2025-04-24', 3),
+(3, 2, 1, '2025-01-25', '2025-03-12', 1),
+(4, 2, 2, '2025-01-27', '2025-02-15', 2),
+(5, 3, 4, '2025-10-15', '2025-12-15', 2),
+(6, 3, 5, '2025-11-10', '2025-12-15', 3);
 
 --
 -- Índices para tablas volcadas
